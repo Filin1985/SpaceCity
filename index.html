@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Materialize Theme</title>
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav class="blue-grey darken-3">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#home" class="brand-logo">SpaceCity</a>
+          <a href="#" data-activates="mobile-nav" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#popular">Popular Places</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <ul class="side-nav" id="mobile-nav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#search">Search</a></li>
+    <li><a href="#popular">Popular Places</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- Section: Slider -->
+
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/vdnh.jpg" alt="">
+        <div class="caption center-align">
+          <h2>Take Your Space Journey</h2>
+          <h5 class="light grey-text text-darken-3 hide-on-small-only">
+            You will see incredible achievements in the space industry that are already a thing of the past, but forever laid the foundation for world astronautics
+          </h5>
+          <a href="https://www.energia.ru/english/" class="btn btn-large">Learn More</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/museum.jpg" alt="">
+        <div class="caption left-align">
+          <h2>Visit The Greatest Museum Of Space</h2>
+          <h5 class="light white-text hide-on-small-only">
+            Here you will see the entire history of space and discover many amazing facts about our solar system and not only
+          </h5>
+          <a href="https://cosmos.vdnh.ru/" class="btn btn-large">Learn More</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/future.jpg" alt="">
+        <div class="caption right-align">
+          <h2>Visit Our Planetarium</h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">
+            You will plunge into the world of stars and galaxies. Find out what the starry sky looks like at any time of the year
+          </h5>
+          <a href="https://www.planetarium-moscow.ru/en/" class="btn btn-large">Learn More</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section: Search -->
+  <section class="section section-search blue-grey darken-3 white-text center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h3>What Do You Want To See?</h3>
+          <div class="input-field">
+            <input class="white grey-text autocomplete" placeholder="Spaheships, Stars, Planets, etc..." type="text" id="autocomplete-input">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Section: Icon Boxes -->
+  <section class="section section-icons grey lighten-4 center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">room</i>
+            <h4>Pick Where</h4>
+            <p>Find us on the map</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">camera_alt</i>
+            <h4>Take Photos</h4>
+            <p>Don't forget your camera</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">free_breakfast</i>
+            <h4>Have a bite</h4>
+            <p>You can visit our cafes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Custom JS & jQuery here
+      $('.button-collapse').sideNav();
+
+      // INIT Slider
+      $('.slider').slider({
+        indicators: false,
+        height: 500,
+        transition:500,
+        interval:6000
+      });
+
+      // Autocomplete
+      $('.autocomplete').autocomplete({
+        data: {
+          "Stars": null,
+          "Spaceships": null,
+          "History": null,
+          "Galaxies": null,
+          "Satellites": null,
+          "Planets": null,
+          "Moon": null,
+          "Cosmodrome": null
+        }
+      })
+
+    });
+  </script>
+</body>
+
+</html>
